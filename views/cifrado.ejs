@@ -1,0 +1,47 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cifrado Afín</title>
+        <link rel="stylesheet" href="resources/css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+        <script src="views/js/index.js"></script>
+    </head>
+    <body>
+        <h1>Cifrado Afín</h1>
+        <form action="/cifrado" method="POST">
+        <div id="columna">
+            <h2>Ingrese el texto a cifrar</h2>
+            <textarea id="TextToCipher" cols="62" rows="5"></textarea>
+            <h2>Ingrese el valor de a</h2>
+            <input type="text" placeholder="Ingrese el valor de a" id="a">
+            <h2>Ingrese el valor de b</h2>
+            <input type="text" placeholder="Ingrese el valor de b" id="b">
+            <h2>Texto cifrado</h2>
+            <textarea name="" id="Text_Area_Cipher" cols="62" rows="5"></textarea>
+            <br />
+            <button class="button" onclick="cipherText()">Cifrar</button>
+        </div>
+        <div id="columna">
+            <h2></h2>
+        </div>
+        <div id="columna">
+            <h2>Ingrese el texto a descifrar</h2>
+            <textarea id="TextToDecipher" cols="58" rows="5"></textarea>
+            <h2>Texto descifrado</h2>
+            <textarea name="" id="Text_Area_Decipher" cols="58" rows="5"></textarea>
+            <br />
+            <button class="button" onclick="decipherText()">Descifrar</button>
+            <br>
+            <div class="histogram-container">
+                <h2 class="histogram">Histograma de Frecuencia de Letras</h2>
+                <canvas id="histogram"></canvas>
+            </div>
+            <div>
+                <button onclick="index.ejs">Salir</button>
+            </div>
+        </div>
+    </form>
+    </body>
+    </html>
